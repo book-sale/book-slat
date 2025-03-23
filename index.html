@@ -3,28 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فروش کتاب - بینشید و ثروتمند شوید</title>
+    <title>فروشگاه آنلاین</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
+        <div class="logo">
+            <h1>فروشگاه آنلاین</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">صفحه اصلی</a></li>
-                <li><a href="about.html">درباره ما</a></li>
-                <li><a href="buy.html">خرید کتاب</a></li>
-                <li><a href="reviews.html">نظرات</a></li>
-                <li><a href="contact.html">تماس با ما</a></li>
+                <li><a href="#">خانه</a></li>
+                <li><a href="#">محصولات</a></li>
+                <li><a href="#">پیشنهادات ویژه</a></li>
+                <li><a href="#">تماس با ما</a></li>
+                <li><a href="#" id="cart-icon">سبد خرید (<span id="cart-count">0</span>)</a></li>
+                <li><a href="login.html"> ثبت نام</a></li>
             </ul>
         </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="جستجو کنید...">
+            <button>جستجو</button>
+        </div>
     </header>
-    <section class="hero">
-        <h1>کتاب "بینشید و ثروتمند شوید"</h1>
-        <p>کتابی برای شروع راه موفقیت و دستیابی به ثروت.</p>
-        <a href="buy.html" class="btn">خرید کتاب</a>
+
+    <section class="banner">
+        <h2>پیشنهادات ویژه امروز!</h2>
+        <p>حراج ویژه فقط امروز! از تخفیف‌های ما استفاده کنید.</p>
+        <button class="shop-now">خرید کن!</button>
     </section>
+
+    <section class="products">
+        <div class="product" data-id="1" data-name="محصول 1" data-price="100000">
+            <img src="product1.jpg" alt="محصول 1">
+            <h3>محصول 1</h3>
+            <p>قیمت: 100,000 تومان</p>
+            <button class="add-to-cart">افزودن به سبد خرید</button>
+        </div>
+        <div class="product" data-id="2" data-name="محصول 2" data-price="200000">
+            <img src="product2.jpg" alt="محصول 2">
+            <h3>محصول 2</h3>
+            <p>قیمت: 200,000 تومان</p>
+            <button class="add-to-cart">افزودن به سبد خرید</button>
+        </div>
+        <div class="product" data-id="3" data-name="محصول 3" data-price="150000">
+            <img src="product3.jpg" alt="محصول 3">
+            <h3>محصول 3</h3>
+            <p>قیمت: 150,000 تومان</p>
+            <button class="add-to-cart">افزودن به سبد خرید</button>
+        </div>
+    </section>
+
+    <!-- Modal سبد خرید -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <h2>سبد خرید</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <p>مجموع: <span id="cart-total-price">0 تومان</span></p>
+            </div>
+            <button id="checkout">پرداخت</button>
+            <button id="close-cart">بستن</button>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2025. همه حقوق محفوظ است.</p>
+        <p>&copy;فروشگاه آنلاین -برای محصولات پر فروش </p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
